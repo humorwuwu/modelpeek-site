@@ -1,6 +1,9 @@
 # ModelPeek 公开页面（App Store 支持 / 营销 / 隐私 / 版权）
 
-这是一个纯静态站点，没有构建步骤，直接部署整个 `site/` 目录即可。
+页面源码已存储在私有库：
+**https://github.com/humorwuwu/modelpeek-site**（`main` 分支，private）。
+
+这是一个纯静态站点，没有构建步骤，直接部署整个目录即可。
 
 | 页面 | 文件 | App Store Connect 字段 |
 |---|---|---|
@@ -28,6 +31,12 @@
    想要更短的路径，可把 `site/` 的内容放到 `gh-pages` 分支根目录。
 
 也可以直接上传到自己的服务器/Nginx/Cloudflare Pages/Netlify/Vercel。
+
+> 注意：当前仓库是 **private**。GitHub Pages 的私有库发布需要 GitHub Pro/Team/Enterprise
+> 等支持私有 Pages 的计划；免费账号的 Pages 只对公开库开放。若要保持仓库私有，建议用
+> Cloudflare Pages / Netlify / Vercel 连接这个私有库（不需要把仓库改成公开），或部署到
+> 自己的服务器。启用任何公开托管都会让这些页面公开到互联网——App Store 的支持 URL 和
+> 隐私政策 URL 本来就需要公开。
 
 ## 需要确认/替换的内容
 
