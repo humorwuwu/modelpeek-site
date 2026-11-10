@@ -1,7 +1,7 @@
 # ModelPeek 公开页面（App Store 支持 / 营销 / 隐私 / 版权）
 
-页面源码已存储在私有库：
-**https://github.com/humorwuwu/modelpeek-site**（`main` 分支，private）。
+页面源码仓库：**https://github.com/humorwuwu/modelpeek-site**（`main` 分支，public）。
+GitHub Pages：**https://humorwuwu.github.io/modelpeek-site/**
 
 这是一个纯静态站点，没有构建步骤，直接部署整个目录即可。
 
@@ -14,29 +14,19 @@
 
 隐私政策的中文/英文内容也保存在 `docs/appstore/privacy-policy.md`，本页与之同步。
 
-## 部署后要填的 URL
+## 已发布的 URL
 
-假设部署在 `https://example.com/modelpeek/`：
+- 营销首页：`https://humorwuwu.github.io/modelpeek-site/`
+- Support URL：`https://humorwuwu.github.io/modelpeek-site/support.html`
+- Privacy Policy URL：`https://humorwuwu.github.io/modelpeek-site/privacy.html`
+- 版权页：`https://humorwuwu.github.io/modelpeek-site/copyright.html`
 
-- Support URL：`https://example.com/modelpeek/support.html`
-- Marketing URL：`https://example.com/modelpeek/`
-- Privacy Policy URL：`https://example.com/modelpeek/privacy.html`
+GitHub Pages 配置：仓库 `Settings → Pages`，Source 为 `main` 分支的 `/` 根目录；
+仓库根目录有 `.nojekyll`，静态文件原样发布。以后推送 `main` 会自动重新构建。
 
-如果部署在 GitHub Pages（仓库公开时）：
+如果以后换自定义域名：在仓库根加 `CNAME`，并在 App Store Connect 里同步改成新域名。
 
-1. Settings → Pages → Source 选 `Deploy from a branch`；
-2. 分支 `main`，目录选 `/docs`；
-3. 页面会是 `https://<用户名>.github.io/<仓库名>/appstore/site/`，
-   Support URL 对应 `.../appstore/site/support.html`。
-   想要更短的路径，可把 `site/` 的内容放到 `gh-pages` 分支根目录。
-
-也可以直接上传到自己的服务器/Nginx/Cloudflare Pages/Netlify/Vercel。
-
-> 注意：当前仓库是 **private**。GitHub Pages 的私有库发布需要 GitHub Pro/Team/Enterprise
-> 等支持私有 Pages 的计划；免费账号的 Pages 只对公开库开放。若要保持仓库私有，建议用
-> Cloudflare Pages / Netlify / Vercel 连接这个私有库（不需要把仓库改成公开），或部署到
-> 自己的服务器。启用任何公开托管都会让这些页面公开到互联网——App Store 的支持 URL 和
-> 隐私政策 URL 本来就需要公开。
+也可以把同一份静态文件部署到自己的服务器/Nginx/Cloudflare Pages/Netlify/Vercel。
 
 ## 需要确认/替换的内容
 
@@ -60,7 +50,7 @@ open http://127.0.0.1:8080/
 
 ## 更新流程
 
-项目内的源文件在 `docs/appstore/site/`；本地私有仓库克隆在 `~/modelpeek-site`。
+项目内的源文件在 `docs/appstore/site/`；本地仓库克隆在 `~/modelpeek-site`。
 改完页面后同步并推送：
 
 ```sh
