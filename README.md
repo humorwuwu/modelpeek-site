@@ -58,6 +58,18 @@ open http://127.0.0.1:8080/
 
 不需要网络；页面没有外部字体、脚本或 CDN 依赖。
 
+## 更新流程
+
+项目内的源文件在 `docs/appstore/site/`；本地私有仓库克隆在 `~/modelpeek-site`。
+改完页面后同步并推送：
+
+```sh
+rsync -a --exclude '.DS_Store' docs/appstore/site/ ~/modelpeek-site/
+git -C ~/modelpeek-site add -A
+git -C ~/modelpeek-site commit -m "Update ModelPeek pages"
+git -C ~/modelpeek-site push
+```
+
 ## 合规
 
 - 页面不出现 Autodesk/Navisworks 的暗示关联，只在版权页做事实性格式说明和商标声明。
